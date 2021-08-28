@@ -3,6 +3,9 @@ import {
   render as renderSnake,
   SNAKE_SPEED,
 } from "./snake.js";
+
+import { update as updateFood, render as renderFood } from "./food.js";
+
 let lastRenderTime = 0;
 const gameContainer = document.getElementById("game-container");
 
@@ -21,9 +24,11 @@ window.requestAnimationFrame(main);
 
 function update() {
   updateSnake();
+  updateFood();
 }
 
 function render() {
   gameContainer.innerHTML = "";
   renderSnake(gameContainer);
+  renderFood(gameContainer);
 }
