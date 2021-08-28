@@ -8,7 +8,7 @@ body {
   background-color: #fff;
 }
 
-.game-container {
+#game-container {
   background-color: #333;
   width: 100vmin;
   height: 100vmin;

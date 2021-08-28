@@ -1,5 +1,10 @@
+import {
+  update as updateSnake,
+  render as renderSnake,
+  SNAKE_SPEED,
+} from "./snake.js";
 let lastRenderTime = 0;
-const SNAKE_SPEED = 1;
+const gameContainer = document.getElementById("game-container");
 
 function main(currentTime) {
   window.requestAnimationFrame(main);
@@ -15,6 +20,10 @@ function main(currentTime) {
 
 window.requestAnimationFrame(main);
 
-function update() {}
+function update() {
+  updateSnake();
+}
 
-function render() {}
+function render() {
+  renderSnake(gameContainer);
+}
