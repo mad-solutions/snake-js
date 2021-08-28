@@ -23,7 +23,6 @@ function getRandomFoodPosition() {
   let newFoodPosition;
   while (newFoodPosition == null || onSnake(newFoodPosition)) {
     newFoodPosition = getRandomGridPosition();
-    console.log(getRandomGridPosition());
   }
   return newFoodPosition;
 }
